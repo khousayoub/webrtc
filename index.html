@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Reception</h2>
+                    <video controls id="receiver" width="70%" height="100px"></video>
+                    <p>
+                        <button id="start">Démarrer la conversation</button>
+                    </p>
+					<textarea id="offer"></textarea>
+                </div>
+                <div class="col-sm-6">
+                    <h2>Envoi</h2>
+                    <video controls id="emitter" width="70%" height="100px"></video>
+					<p>
+                        <button id="receive">Recever la conversation</button>
+                    </p>
+					<form id="incomming">
+						<textarea></textarea>
+						<button type="submit">Envoyer</button>
+					</form>
+				</div>
+            </div>
+        </div>
+		<script src="simplePeer.js"></script>
+		<script src="app.js"></script>
+    </body>
+</html>
