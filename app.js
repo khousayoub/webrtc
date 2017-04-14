@@ -29,7 +29,7 @@ function doEvent(p) { // cett function permet de gérer l'offre et la demande
 function startPeer(initiator){
 	navigator.getUserMedia({
 		video:true,
-		audio:false
+		audio:true
 	}, function(stream) {
 		let p = new SimplePeer({
 			initiator: initiator,
