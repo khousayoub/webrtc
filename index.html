@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Simplon Stream</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="style/bootstrap.css" >
+        <link rel="stylesheet" href="style/style.css" >
     </head>
     <body>
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
                     <h2>Reception</h2>
-                    <video controls id="receiver" width="70%" height="100px"></video>
+                    <video controls id="receiver"></video>
                     <p>
-                        <button id="start">Démarrer la conversation</button>
+                        <button id="start">Démarrez la conversation</button>
                     </p>
 					<textarea id="offer"></textarea>
                 </div>
                 <div class="col-sm-6">
                     <h2>Envoi</h2>
-                    <video controls id="emitter" width="70%" height="100px"></video>
+                    <video controls id="emitter"></video>
 					<p>
-                        <button id="receive">Recever la conversation</button>
+                        <button id="receive">Recevez la conversation</button>
                     </p>
 					<form id="incomming">
-						<textarea></textarea>
-						<button type="submit">Envoyer</button>
+						<textarea id="offer2"></textarea>
 					</form>
 				</div>
             </div>
+<br><br><br><br><br><br>
+            <button class= "send" type="submit">Envoyer</button>
         </div>
-		<script src="simplePeer.js"></script>
-		<script src="app.js"></script>
     </body>
+    <script src="js/simplePeer.js"></script>
+    <script src="js/app.js"></script>
 </html>

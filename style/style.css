@@ -1,0 +1,30 @@
+body {
+	background: url('bg.jpeg') fixed center center no-repeat;
+	background-size: cover;
+	width: 100%;
+	color: white;
+}
+button {
+background-color: grey;
+color: white;
+border-radius: 5px;
+
+}
+h2 {
+  text-align: center;
+}
+#receiver, #emitter {
+   width=70%;
+   height=100px;
+   margin:0 auto;
+   display:block;
+}
+#start, #receive{
+  margin:0 auto;
+  display:block;
+  margin-top: 5px;
+}
+#offer, #offer2, .send {
+  margin:0 auto;
+  display:block;
+}
