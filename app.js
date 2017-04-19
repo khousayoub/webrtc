@@ -2,21 +2,21 @@
 navigator.getUserMedia = navigator.getUserMedia ||
                          navigator.webkitGetUserMedia ||
                          navigator.mozGetUserMedia;
-	// Cette ligne pour régler un problème lié à mozzila qui ne connais getUSERMedia
+	// Cette ligne pour régler un problème lié à mozzarila qui ne connais getUSERMedia
 	// qui permet d'autorisé l'utilisateur d'utiliser sa cam
-function doEvent(p) { // cett function permet de gérer l'offre et la demande 
+function doEvent(p) { // cett function permet de gérer l'offre et la demande
 					// en fonction du peer créé
 	p.on("signal", function(data){
 		document.querySelector("#offer").textContent = JSON.stringify(data);
 	}) // en cas ou on demande une offre ; on génére le code dans le textearea pour
 	// l'envoyer aprés à l'autre utilisateur
-	
+
 	p.on("stream", function(stream){
 		let receiver = document.querySelector("#receiver")
 			receiver.src = window.URL.createObjectURL(stream);
 			receiver.play();
 	})
-	
+
 	p.on("error", function(err){
 		console.log("erreur", err)
 	})
@@ -40,9 +40,9 @@ function startPeer(initiator){
 		let video = document.querySelector("#emitter")
 			video.src = window.URL.createObjectURL(stream);
 			video.play();
-	
+
 	}, function(err){
-		
+
 	})
 }
 
@@ -53,5 +53,3 @@ document.querySelector("#start").addEventListener("click", function(e){
 document.querySelector("#receive").addEventListener("click", function(e){
 	startPeer(false)
 })
-
-
