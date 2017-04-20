@@ -45,7 +45,10 @@ function startPeer(initiator){
 
 	})
 }
-
+document.querySelector("#dataReceive").addEventListener("input", function() {
+  document.querySelector("#submitReceive").disabled = false;
+  if (this.value == "") {document.querySelector("#submitReceive").disabled = true; console.log("dd");}
+})
 document.querySelector("#start").addEventListener("click", function(e){
 	startPeer(true)
 })
